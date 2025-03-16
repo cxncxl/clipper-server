@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+model inputs {
+  id        Int     @id @default(autoincrement())
+  file_path String  @db.VarChar(255)
+  file_name String? @db.VarChar(255)
+  processed Boolean @db.Bit(1)
+}
+
+model clips {
+  id         Int     @id @default(autoincrement())
+  file_path  String  @db.VarChar(255)
+  from_input Int
+  uploaded   Boolean @db.Bit(1)
+  title      String? @db.VarChar(255)
+}

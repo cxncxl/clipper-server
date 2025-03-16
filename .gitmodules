@@ -1,0 +1,3 @@
+[submodule "clipper-service"]
+	path = clipper-service
+	url = git@cxncxl:cxncxl/clipper-service
