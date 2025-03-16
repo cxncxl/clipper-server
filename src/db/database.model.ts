@@ -19,3 +19,45 @@ export type Clip = {
     title: string;
     uploaded: boolean;
 }
+
+export type TagSet = {
+    id: number;
+    tags: string;
+    active: boolean;
+}
+
+export type UploadQueue = {
+    id: number;
+    /**
+     * clip id
+     */
+    clip: number;
+    /**
+     * cred id
+     */
+    account: number;
+    /**
+     * tags id
+     */
+    tags: number;
+
+    uploaded: boolean;
+    /**
+     * unix timestamp
+     */
+    uploaded_at: number;
+}
+
+/**
+ * db model for platfrom (yt, tiktok, etc) auth creds
+ */
+export type PlatfromAuth = {
+    id: number;
+    email: string;
+    access_token: string;
+    refresh_token: string;
+    /**
+     * unix timestamp
+     */
+    expires_at: number;
+}

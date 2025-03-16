@@ -21,3 +21,26 @@ model clips {
   uploaded   Boolean @db.Bit(1)
   title      String? @db.VarChar(255)
 }
+
+model tags {
+  id     Int     @id @default(autoincrement())
+  tags   String  @db.VarChar(4096)
+  active Boolean @db.Bit(1)
+}
+
+model upload_queue {
+  id          Int     @id @default(autoincrement())
+  clip        Int
+  account     Int
+  uploaded    Boolean @db.Bit(1)
+  uploaded_at Int?
+  tags        Int
+}
+
+model youtube_credentials {
+  id            Int    @id @default(autoincrement())
+  email         String @db.VarChar(255)
+  access_token  String @db.VarChar(1024)
+  refresh_token String @db.VarChar(1024)
+  expires_at    Int
+}

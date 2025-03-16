@@ -59,3 +59,5 @@ public/
 
 prisma/*
 !prisma/schema.prisma
+
+yt-creds.json

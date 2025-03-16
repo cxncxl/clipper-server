@@ -22,7 +22,7 @@ see [clipper-client]() -- frontend part
     * Optionally manually update description
     * Optionally select version with/without subtitles
 
-4. Add description and tags (WIP)
+4. Add description and tags
 5. Put in upload queue
 
 Other services:
